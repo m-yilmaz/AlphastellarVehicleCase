@@ -1,4 +1,4 @@
-# AlphastellarVehicleCase
+# AlphastellarVehicleCase ASP.NET CORE 6 WEB API
 
 ## Project Structere
 
