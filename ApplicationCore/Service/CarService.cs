@@ -31,8 +31,8 @@ namespace ApplicationCore.Service
 
         public async Task<List<Car>> GetCarsAsync()
         {
-            var spect = new CarsSpecification();
-            return await _carRepo.GetAllAsync(spect);
+            var spec = new CarsSpecification();
+            return await _carRepo.GetAllAsync(spec);
         }
 
         public async Task<List<Car>> GetCarsByColorAsync(string colorName)

@@ -22,6 +22,8 @@ builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServe
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<ICarModelService, CarModelService>();
+builder.Services.AddScoped<IBussService, BussService>();
+builder.Services.AddScoped<IBussModelService, BussModelService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -29,7 +29,7 @@ namespace WebAPI.Services
             }
             CarModel model = new()
             {
-                Id = id,
+                Id = car.Id,
                 CarName = car.CarName,
                 ColorName = car.Color.ColorName,
                 Headlight = car.Headlight.ToString() == "0" ? "Open" : "Close",
