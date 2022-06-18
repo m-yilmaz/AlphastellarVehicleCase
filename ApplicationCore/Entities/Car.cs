@@ -1,5 +1,5 @@
-﻿using ApplicationCore.Enums;
-using ApplicationCore.Interfaces;
+﻿using ApplicationCore.Abstracts;
+using ApplicationCore.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

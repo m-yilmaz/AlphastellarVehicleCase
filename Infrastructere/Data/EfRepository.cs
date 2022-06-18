@@ -19,38 +19,16 @@ namespace Infrastructere.Data
         {
             _context = context;
         }
-        public async Task<T> AddAsnyc(T entity)
-        {
-            _context.Add(entity);
-            await _context.SaveChangesAsync();
-            return entity;
-        }
 
-        public async Task<int> CountAsync(ISpecification<T> specification)
-        {
-            return await _context.Set<T>().WithSpecification(specification).CountAsync();
-        }
-
-        public async Task<T> DeleteAsnyc(T entity)
+        public async Task DeleteAsnyc(T entity)
         {
             _context.Remove(entity);
             await _context.SaveChangesAsync();
-            return entity;
-        }
-
-        public async Task<T> FirstAsync(ISpecification<T> specification)
-        {
-            return await _context.Set<T>().WithSpecification(specification).FirstAsync();
         }
 
         public async Task<T> FirstOrDefaultAsync(ISpecification<T> specification)
         {
             return await _context.Set<T>().WithSpecification(specification).FirstOrDefaultAsync();
-        }
-
-        public async Task<List<T>> GetAllAsync()
-        {
-            return await _context.Set<T>().ToListAsync();
         }
 
         public async Task<List<T>> GetAllAsync(ISpecification<T> specification)
@@ -63,10 +41,16 @@ namespace Infrastructere.Data
             return await _context.FindAsync<T>(id);
         }
 
-        public async Task UpdateAsnyc(T entity)
+        public async Task<T> GetByIdAsync(ISpecification<T> specification)
         {
-            _context.Update(entity);
+            return await _context.Set<T>().WithSpecification(specification).FirstAsync();
+        }
+
+        public async Task<T> UpdateAsync(T Entity)
+        {
+            _context.Update(Entity);
             await _context.SaveChangesAsync();
+            return Entity;
         }
     }
 }

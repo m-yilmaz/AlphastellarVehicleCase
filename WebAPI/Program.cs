@@ -1,7 +1,10 @@
 using ApplicationCore.Interfaces;
+using ApplicationCore.Service;
 using Infrastructere.Data;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Extensions;
+using WebAPI.Interfaces;
+using WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +20,8 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<ICarModelService, CarModelService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
