@@ -10,10 +10,8 @@ namespace ApplicationCore.Entities
     {
         public string ColorName { get; set; }
 
-        #region Relations
         public List<Car> Cars { get; set; }
-        public List<Boat> Boats { get; set; }
         public List<Buss> Buses { get; set; }
-        #endregion
+        public List<Boat> Boats { get; set; }
     }
 }

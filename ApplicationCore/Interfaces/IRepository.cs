@@ -24,8 +24,6 @@ namespace ApplicationCore.Interfaces
 
         Task<int> CountAsync(ISpecification<T> specification);
 
-        Task<T> FirstAsync(ISpecification<T> specification);
-
         Task<T> FirstOrDefaultAsync(ISpecification<T> specification);
     }
 }

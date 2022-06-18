@@ -8,7 +8,7 @@ namespace ApplicationCore.Enums
 {
     public enum HeadlightEnum
     {
-        TrunOn,
+        TurnOn,
         TurnOff
     }
 }

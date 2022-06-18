@@ -10,6 +10,8 @@ namespace ApplicationCore.Entities
 {
     public class Buss : Vehicle
     {
+        public string BussName { get; set; }
+
         #region Relation With Color
         public int ColorId { get; set; }
         public Color Color { get; set; } 

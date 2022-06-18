@@ -10,6 +10,7 @@ namespace ApplicationCore.Entities
 {
     public class Car : Vehicle, IHeadlight, IWheels
     {
+        public string CarName { get; set; } 
         public int Wheels { get; set; }
         public HeadlightEnum Headlight { get; set; }
 
