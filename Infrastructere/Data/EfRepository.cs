@@ -28,22 +28,35 @@ namespace Infrastructere.Data
 
         public async Task<T> FirstOrDefaultAsync(ISpecification<T> specification)
         {
-            return await _context.Set<T>().WithSpecification(specification).FirstOrDefaultAsync();
+            var entity = await _context.Set<T>().WithSpecification(specification).FirstOrDefaultAsync();
+            if (entity == null) return null;
+            return entity;
+            
         }
 
         public async Task<List<T>> GetAllAsync(ISpecification<T> specification)
         {
-            return await _context.Set<T>().ToListAsync(specification);
+            var entityList = await _context.Set<T>().ToListAsync(specification);
+            if (entityList == null) return null;
+            return entityList;
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _context.FindAsync<T>(id);
+            var entity = await _context.FindAsync<T>(id);
+            if (entity == null) return null;
+            return entity;
         }
 
         public async Task<T> GetByIdAsync(ISpecification<T> specification)
         {
-            return await _context.Set<T>().WithSpecification(specification).FirstAsync();
+
+            var entity = await _context.Set<T>().WithSpecification(specification).FirstOrDefaultAsync();
+            if (entity != null)
+            {
+                return entity;
+            }
+            return null;
         }
 
         public async Task<T> UpdateAsync(T Entity)

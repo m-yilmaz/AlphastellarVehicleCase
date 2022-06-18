@@ -17,7 +17,7 @@ namespace Infrastructere.Data
         }
 
         public DbSet<Car> Cars { get; set; }
-        public DbSet<Buss> Buses { get; set; }
+        public DbSet<Bus> Buses { get; set; }
         public DbSet<Boat> Boats { get; set; }
         public DbSet<Color> Colors { get; set; }
 

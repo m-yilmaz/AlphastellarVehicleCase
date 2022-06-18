@@ -11,7 +11,7 @@ namespace ApplicationCore.Entities
         public string ColorName { get; set; }
 
         public List<Car> Cars { get; set; }
-        public List<Buss> Buses { get; set; }
+        public List<Bus> Buses { get; set; }
         public List<Boat> Boats { get; set; }
     }
 }

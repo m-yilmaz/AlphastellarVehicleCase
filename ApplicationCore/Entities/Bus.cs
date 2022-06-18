@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Entities
 {
-    public class Buss : Vehicle
+    public class Bus : Vehicle
     {
         public string BussName { get; set; }
 

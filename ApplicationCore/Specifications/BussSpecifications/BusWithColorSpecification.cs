@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Specifications.BussSpecifications
 {
-    public class BussWithColorSpecification : Specification<Buss>
+    public class BusWithColorSpecification : Specification<Bus>
     {
-        public BussWithColorSpecification(string colorName)
+        public BusWithColorSpecification(string colorName)
         {
             Query.Include(x => x.Color)
                 .Where(x => x.Color.ColorName.ToLower() == colorName.ToLower());

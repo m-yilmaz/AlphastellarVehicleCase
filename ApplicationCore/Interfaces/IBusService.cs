@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Interfaces
 {
-    public interface IBussService
+    public interface IBusService
     {
-        Task<List<Buss>> GetBussAsync();
-        Task<Buss> GetBussByIdAsync(int carId);
-        Task<List<Buss>> GetBussByColorAsync(string colorName);
+        Task<List<Bus>> GetBusAsync();
+        Task<Bus> GetBusByIdAsync(int carId);
+        Task<List<Bus>> GetBusByColorAsync(string colorName);
     }
 }

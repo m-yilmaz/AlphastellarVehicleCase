@@ -57,6 +57,7 @@ namespace WebAPI.Services
 
         public async Task<List<CarModel>> GetCarsByColor(string colorName)
         {
+            if (string.IsNullOrEmpty(colorName)) return null;
             var carList = await _carService.GetCarsByColorAsync(colorName);
             if (carList == null)
             {

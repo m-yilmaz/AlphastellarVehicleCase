@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructere.Data.Config
 {
-    public class BusesConfiguration : IEntityTypeConfiguration<Buss>
+    public class BusesConfiguration : IEntityTypeConfiguration<Bus>
     {
-        public void Configure(EntityTypeBuilder<Buss> builder)
+        public void Configure(EntityTypeBuilder<Bus> builder)
         {
             builder.Property(x => x.ColorId).IsRequired();
         }

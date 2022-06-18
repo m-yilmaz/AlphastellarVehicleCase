@@ -32,9 +32,9 @@ namespace Infrastructere.Data
 
             Car c3 = new() { CarName = "Audi A6", Headlight = HeadlightEnum.TurnOff, Wheels = 4, Color = white };
 
-            Buss bu1 = new() { BussName = "Mercedes Travego", Color = white };
+            Bus bu1 = new() { BussName = "Mercedes Travego", Color = white };
 
-            Buss bu2 = new() { BussName = "Mercedes Travego", Color = blue };
+            Bus bu2 = new() { BussName = "Mercedes Travego", Color = blue };
 
             Boat bo1 = new () { BoatName = "Bertram", Color = black };
             Boat bo2 = new () { BoatName = "Boston Whaler", Color = red };

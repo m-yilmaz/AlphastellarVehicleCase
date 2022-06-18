@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Specifications.CarSpecifications
+namespace ApplicationCore.Specifications.BussSpecifications
 {
-    public class CarsSpecification : Specification<Car>
+    public class BusSpecification : Specification<Bus>
     {
-        public CarsSpecification()
+        public BusSpecification()
         {
             Query.Include(x => x.Color);
         }
-        public CarsSpecification(int id) : this()
+        public BusSpecification(int id) : this()
         {
             Query.Where(x => x.Id == id);
         }
